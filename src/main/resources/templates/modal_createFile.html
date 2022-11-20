@@ -1,0 +1,29 @@
+<div class="modal fade" id="modalCreateFile" tabindex="-1" aria-hidden="true" th:fragment="modal_createFile">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create properties</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form method="post" th:action="@{/ui/uploadFile}" enctype="multipart/form-data">
+	      <div class="modal-body">
+			<div class="mb-3">
+			  <label for="exampleFormControlInput1" class="form-label">Filename</label>
+			  <input name="filename" type="text" class="form-control" placeholder="Application-admin.yml">
+			</div>
+			 <div class="mb-3" style="text-align: center;font-weight: bold;">
+			  <span class="align-middle">OR</span>
+			</div>
+	        <div class="mb-3">
+			  <label for="formFile" class="form-label">Upload a file</label>
+			  <input name="image" class="form-control" type="file" id="formFile">
+			</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+	        <button type="submit" class="btn btn-success">Create</button>
+	      </div>
+      </form>
+    </div>
+  </div>
+</div>

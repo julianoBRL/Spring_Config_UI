@@ -1,0 +1,160 @@
+body {
+  font-size: .875rem;
+}
+
+
+#codeEditor, #lineCounter {
+    font-family: lucida console, courier new, courier, monospace;
+    margin: 0;
+    padding: 10px 0;
+    height: 75vh;
+    border-radius: 0;
+    resize: none;
+    font-size: 16px;
+    line-height: 1.2;
+    outline: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#lineCounter:focus-visible,
+#codeEditor:focus-visible {
+    outline:none;
+}
+
+#lineCounter {
+      display: flex;
+      border-color: transparent;
+      overflow-y: hidden;
+      text-align: right;
+      box-shadow: none;
+      color: #707070;
+      background-color: #d8d8d8;
+      position: absolute;
+      width: 3.5rem;
+      /* Determine appearance of line counter */
+      background-color:#3E3D32;
+      border-color:#3E3D32;
+      color:#928869;
+}
+
+#codeEditor {
+      padding-left: calc(3.5rem + 5px);
+      width:100%;
+      /* Determine appearance of code editor */
+      background-color:#272822;
+      border-color:#272822;
+      color:#ffffff;
+}
+
+
+
+
+
+
+
+.codeeditor-container {
+    resize: none;
+    width: -webkit-fill-available;
+    min-width:500px; 
+    max-width:100%;
+    min-height:500px;
+    height:100%;
+}
+
+
+.codeeditor {
+    resize: none;
+    width: -webkit-fill-available;
+    min-height:500px;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  /* rtl:raw:
+  right: 0;
+  */
+  bottom: 0;
+  /* rtl:remove */
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    top: 5rem;
+  }
+}
+
+.sidebar-sticky {
+  height: calc(100vh - 48px);
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #727272;
+}
+
+.sidebar .nav-link.active {
+  color: #2470dc;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+}
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  background-color: rgba(0, 0, 0, .25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .navbar-toggler {
+  top: .25rem;
+  right: 1rem;
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
